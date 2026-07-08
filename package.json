@@ -1,0 +1,19 @@
+{
+  "name": "bulls-cows-console-game",
+  "version": "1.0.0",
+  "description": "A console implementation of the classic Bulls and Cows guessing game written in Node.js.",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "play": "node src/app.js"
+  },
+  "keywords": [
+    "bulls",
+    "cows",
+    "game",
+    "console",
+    "node"
+  ],
+  "author": "Dopo",
+  "license": "ISC"
+}
