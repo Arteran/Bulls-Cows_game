@@ -1,0 +1,64 @@
+.matrixTableContainer {
+  border: 1px solid var(--ink-color);
+  height: 200px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.paperMatrixTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.paperMatrixTable th,
+.paperMatrixTable td {
+  border: 1px solid var(--ink-color);
+  padding: 4px 10px;
+  text-align: center;
+}
+
+.paperMatrixTable th {
+  background: var(--paper-bg);
+  font-weight: bold;
+  border-bottom: 2px solid var(--ink-color);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.colRound {
+  width: 15%;
+}
+
+.colGuess {
+  width: 35%;
+  font-weight: bold;
+}
+
+.colBulls {
+  width: 25%;
+}
+
+.colCows {
+  width: 25%;
+}
+
+.placeholderRow td {
+  font-family: var(--font-doodle);
+  font-size: 1.15rem;
+  color: var(--ink-pencil);
+  padding: 20px 0;
+}
+
+.matrixCircled {
+  border: 1px solid var(--ink-color);
+  border-radius: 48% 52% 47% 53% / 45% 42% 58% 55%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
