@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A console implementation of the classic Bulls and Cows guessing game written in Node.js.",
   "type": "module",
-  "main": "src/app.js",
+  "main": "backend/app.js",
   "scripts": {
-    "play": "node src/app.js"
+    "play": "node backend/app.js"
   },
   "keywords": [
     "bulls",
