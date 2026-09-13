@@ -6,7 +6,7 @@
   --ink-black: #1f2022;
   --ink-pencil: #6c7178;
   
-  --ink-color: var(--ink-blue);
+  --ink-color: var(--ink-pencil);
   --ink-red: #c42010;
   
   --paper-bg: #fffdf5;
@@ -25,9 +25,7 @@ body.ink-pencil { --ink-color: var(--ink-pencil); }
 
 body {
   background-color: var(--desk-bg);
-  background-image: 
-    repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 20px, transparent 20px, transparent 40px),
-    linear-gradient(90deg, #1c130b, #2b1f14 50%, #1c130b 100%);
+  background-image: linear-gradient(90deg, #1c130b, #2b1f14 50%, #1c130b 100%);
   color: var(--ink-color);
   font-family: var(--font-hand);
   min-height: 100vh;
@@ -66,9 +64,4 @@ body.drawing-mode-active #scribble-canvas {
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill:none;stroke:black;stroke-width:2px;' viewBox='0 0 24 24'><circle cx='12' cy='12' r='6'/><line x1='12' y1='2' x2='12' y2='22'/><line x1='2' y1='12' x2='22' y2='12'/></svg>") 12 12, crosshair;
 }
 
-body.grid-lines-active .notebook-page-bg {
-  background-image: 
-    linear-gradient(rgba(15, 76, 181, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 76, 181, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
+/* Removed duplicate grid */

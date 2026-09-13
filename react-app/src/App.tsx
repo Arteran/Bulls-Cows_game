@@ -46,8 +46,8 @@ const AppContent: React.FC = () => {
       <NotebookWrapper>
         <ScribbleCanvas />
         <BinderSpiral />
-        <RulesPage />
         <GamePage />
+        <RulesPage />
       </NotebookWrapper>
     </DeskSurface>
   );

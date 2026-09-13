@@ -6,16 +6,7 @@
   flex-direction: column;
 }
 
-.notebookPage::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(220, 80, 80, 0.25);
-  z-index: 2;
-  right: 20px;
-}
+/* Red margin is now handled by the NotebookWrapper */
 
 .pageContent {
   z-index: 3;

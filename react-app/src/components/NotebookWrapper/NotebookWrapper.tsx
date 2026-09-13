@@ -8,7 +8,10 @@ interface NotebookWrapperProps {
 export const NotebookWrapper: React.FC<NotebookWrapperProps> = ({ children }) => {
   return (
     <div className={styles.notebookWrapper} id="notebook-container">
-      {children}
+      <div className={styles.contentOverlay}>
+        {children}
+      </div>
     </div>
   );
 };
+

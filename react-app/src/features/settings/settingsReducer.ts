@@ -1,7 +1,7 @@
 import type { SettingsState, SettingsAction } from '../../types/settings';
 
 export const initialSettingsState: SettingsState = {
-  inkTheme: 'ink-blue',
+  inkTheme: 'ink-pencil',
   gridActive: true,
   audioActive: true,
   drawMode: false,

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSettings } from '../../features/settings/useSettings';
 import { useSound } from '../../hooks/useSound';
 import styles from './StickyNotes.module.css';
@@ -6,7 +6,6 @@ import styles from './StickyNotes.module.css';
 export const StickyNotes: React.FC = () => {
   const { state, setInkTheme, toggleGrid, toggleAudio, toggleDrawMode, clearDrawings } = useSettings();
   const sound = useSound();
-  const [crossedDigits, setCrossedDigits] = useState<number[]>([]);
 
   const handleInkChange = (theme: 'ink-blue' | 'ink-black' | 'ink-pencil') => {
     sound.click();
@@ -39,18 +38,6 @@ export const StickyNotes: React.FC = () => {
   const handleClearDrawings = () => {
     sound.success();
     clearDrawings();
-  };
-
-  const handleToggleDeduction = (num: number) => {
-    sound.keypress();
-    setCrossedDigits((prev) =>
-      prev.includes(num) ? prev.filter((n) => n !== num) : [...prev, num]
-    );
-  };
-
-  const handleClearDeduction = () => {
-    sound.click();
-    setCrossedDigits([]);
   };
 
   return (
@@ -115,29 +102,19 @@ export const StickyNotes: React.FC = () => {
         </button>
       </div>
 
-      <div className={`${styles.stickyNote} ${styles.noteOrange}`}>
-        <h4 className={styles.stickyTitle}>DEDUCTION HELPER</h4>
-        <p className={styles.stickyText} style={{ fontSize: '0.8rem', margin: 0 }}>
-          Tap numbers to cross out:
+      <div className={`${styles.stickyNote} ${styles.noteGreen}`}>
+        <h4 className={styles.stickyTitle}>RULES</h4>
+        <p className={styles.stickyText} style={{ fontSize: '0.8rem', margin: '5px 0' }}>
+          Secret code: 4 unique digits.
         </p>
-        <div className={styles.deductionGrid}>
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => {
-            const isCrossed = crossedDigits.includes(num);
-            return (
-              <button
-                key={num}
-                className={`${styles.deductionNum} ${isCrossed ? styles.crossed : ''}`}
-                onClick={() => handleToggleDeduction(num)}
-              >
-                {num}
-              </button>
-            );
-          })}
-        </div>
-        <button className={styles.btnClearDeduction} onClick={handleClearDeduction}>
-          RESET BOARD
-        </button>
+        <p className={styles.stickyText} style={{ fontSize: '0.8rem', margin: '5px 0' }}>
+          <strong>Bulls (B):</strong> Right digit & position.
+        </p>
+        <p className={styles.stickyText} style={{ fontSize: '0.8rem', margin: '5px 0' }}>
+          <strong>Cows (C):</strong> Right digit, wrong position.
+        </p>
       </div>
+
     </div>
   );
 };

@@ -7,4 +7,6 @@
   z-index: 8;
   pointer-events: none;
   cursor: default;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }

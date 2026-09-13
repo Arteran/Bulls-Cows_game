@@ -10,6 +10,8 @@
   justify-content: space-around;
   z-index: 10;
   pointer-events: none;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
 
 .spiralLoop {
