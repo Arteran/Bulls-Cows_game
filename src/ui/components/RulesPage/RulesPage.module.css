@@ -1,0 +1,110 @@
+.notebookPage {
+  padding: 40px 30px 30px 45px;
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Red margin is now handled by the NotebookWrapper */
+
+.pageContent {
+  z-index: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
+}
+
+.handH2 {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  border-bottom: 2px dashed var(--ink-color);
+  padding-bottom: 4px;
+  margin-bottom: 5px;
+}
+
+.handH3 {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+.handP {
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.doodleText {
+  border: 1px solid var(--ink-color);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.handList {
+  padding-left: 20px;
+  font-size: 0.9rem;
+}
+
+.handList li {
+  margin-bottom: 4px;
+}
+
+/* Sketch examples container */
+.doodleWalkthrough {
+  border: 2px solid var(--ink-color);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 12px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.95rem;
+  transform: rotate(-1deg);
+}
+
+.doodleHighlight {
+  font-weight: bold;
+  color: var(--ink-red);
+}
+
+.circleDoodle {
+  border: 1px solid var(--ink-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.doodleBullCow {
+  font-family: var(--font-doodle);
+  font-size: 1.5rem;
+  display: flex;
+  gap: 30px;
+  color: var(--ink-pencil);
+  opacity: 0.6;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.cowFace, .bullFace {
+  display: inline-block;
+  transform: rotate(-5deg);
+}
+
+@media (max-width: 900px) {
+  .notebookPage {
+    padding: 24px 20px 20px 20px;
+    min-height: auto;
+    border-bottom: 2px dashed var(--ink-color);
+  }
+  .notebookPage::after {
+    display: none;
+  }
+}
