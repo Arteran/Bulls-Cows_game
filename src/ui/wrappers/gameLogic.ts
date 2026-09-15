@@ -1,6 +1,6 @@
-import { getRandomNumbers } from '../../../backend/modules/generateRandomNumber.js';
-import { getBullsAndCows } from '../../../backend/modules/getBullsAndCows.js';
-import { checkIsValidUserInput } from '../../../backend/modules/checkIsValidUserInput.js';
+import { getRandomNumbers } from '../../core/modules/generateRandomNumber.js';
+import { getBullsAndCows } from '../../core/modules/getBullsAndCows.js';
+import { checkIsValidUserInput } from '../../core/modules/checkIsValidUserInput.js';
 
 export interface ScoreResult {
   bulls: number;
