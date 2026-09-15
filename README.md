@@ -12,7 +12,7 @@ Bulls & Cows is a classic logical code-breaking mind game. This project features
 
 ## Game Interface Preview
 
-![Bulls & Cows: Paper & Pen Edition](./assets/game_mockup.jpg)
+![Bulls & Cows: Paper & Pen Edition](./assets/game_mockup.png)
 
 ---
 
