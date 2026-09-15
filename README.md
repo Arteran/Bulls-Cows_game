@@ -80,21 +80,21 @@ This project uses a Unified Architecture, storing both core console logic and UI
 
 ```text
 ├── assets/
-│   └── game_mockup.jpg                 # Mockup image for README preview
+│   └── game_mockup.jpg
 ├── src/
 │   ├── core/                           # Core game logic modules (backend)
-│   │   ├── app.js                      # Entry point for the console game
-│   │   └── modules/                    # Shared pure functions
+│   │   ├── app.js
+│   │   └── modules/
 │   │       ├── checkIsValidUserInput.js
 │   │       ├── generateRandomNumber.js
 │   │       └── getBullsAndCows.js
 │   └── ui/                             # React + TypeScript web app (visual)
-│       ├── wrappers/                   # Typed adapters for core modules
-│       ├── features/                   # Game, canvas, and settings modules
-│       ├── hooks/                      # App-wide hooks (sounds, input handling)
-│       └── styles/                     # CSS stylesheets and global layouts
-├── index.html                          # Root entry point for Vite/React
-├── package.json                        # Unified configuration and dependencies
-├── vite.config.ts                      # Vite build settings
-└── README.md                           # Project documentation (this file)
+│       ├── wrappers/
+│       ├── features/
+│       ├── hooks/
+│       └── styles/
+├── index.html
+├── package.json
+├── vite.config.ts
+└── README.md
 ```
